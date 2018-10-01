@@ -13,6 +13,14 @@ DESTINATION=$BUILD_DIR/bin  # will be `/app/bin` inside dyno
 
 # Download and extract wkhtmltopdf
 if [ ! -d "$WKHTMLTOPDF_PATH" ]; then
+
+	echo '-----> Downloading libpng12'
+	wget -q -O /tmp/libpng12.deb http://mirrors.kernel.org/ubuntu/pool/main/libp/libpng/libpng12-0_1.2.54-1ubuntu1_amd64.deb
+	
+	echo '-----> Installing libpng12'
+	sudo dpkg -i /tmp/libpng12.deb
+	rm /tmp/libpng12.deb
+
 	echo '-----> Downloading wkhtmltopdf'
 	mkdir -p $(dirname $DEB_FILENAME)
 	wget --quiet --continue --output-document="$DEB_FILENAME" "$WKHTMLTOPDF_URL"
