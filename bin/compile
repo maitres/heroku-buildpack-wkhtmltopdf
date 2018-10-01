@@ -4,7 +4,7 @@
 BUILD_DIR=$1
 CACHE_DIR=$2
 
-WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.xenial_amd64.deb"
+WKHTMLTOPDF_URL="https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb"
 DEB_FILENAME=$CACHE_DIR/$(basename $WKHTMLTOPDF_URL)
 EXTRACTED_DATA_TAR="$(pwd)/data.tar.xz"
 WKHTMLTOPDF_PATH=$CACHE_DIR/usr/local
