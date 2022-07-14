@@ -4,7 +4,7 @@
 BUILD_DIR=$1
 
 
-if [ "$STACK" = "heroku-18" ] || [ "$STACK" = "heroku-20" ]; then
+if [ "$STACK" = "heroku-18" ] || [ "$STACK" = "heroku-20" ] || [ "$STACK" = "heroku-22" ]; then
 	echo "wkhtmltopdf"
 else
 	echo "ERROR: wkhtmltopdf does not work with this stack version!"
